@@ -22,3 +22,5 @@ Thumbs.db
 
 # Environment variables (never push secrets)
 .env
+Cargo.lock
+Cargo.toml

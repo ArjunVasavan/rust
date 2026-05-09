@@ -5,30 +5,32 @@ fn main() {
     println!("Numbers Array: {:?}",numbers);
 
     // let mix: [1,2,"apple",true];
-    
+
     let fruits: [&str;3] = ["Apple","Banna","Orange"];
 
     print!("fruits: {}\n",fruits[0]);
     print!("fruits: {:?}\n",fruits);
- // tuple
+
+    // tuple
     let human: (String, i32, bool) = ("Alice".to_string(),30,false) ;
-
+    // if i just put Alice its an string slice
     println!("Human tuple {:?}\n",human);
+
     let my_mix_tuple = ("Kratos", 23, true, [1,2,3,4,5]);
+    println!("My Mix Tuple: {:?}\n",my_mix_tuple);
 
-    println!("My Mix Tuble: {:?}\n",my_mix_tuple);
-
- // slices
-    // [1,2,3,4] -> its an contigiuous lines of sequence
+    // SLICES
+    // Its Dynamically sized contigiuous sequence of elements
+    // [1,2,3,4,5] -> here each are adacent to eachother in memory
     // eg: 
 
     let number_slices:&[i32] = &[1,2,3,4,5];
-
-    println!("Number SLices: {:?}\n",number_slices);
+    println!("Number Slices: {:?}\n",number_slices);
 
     let animal_slices:&[&str] = &[ "Lion","Elephant","Crocodile" ];
-
     println!("Animals: {:?}",animal_slices);
 
+    let book_slices:&[&String] = &[ &"Wings of Fire".to_string(), &"Jungle Book".to_string(), &"It".to_string()];
+    println!("Book Slices: {:?}\n",book_slices);
 
 }

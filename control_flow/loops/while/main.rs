@@ -1,10 +1,11 @@
-fn main() {
-    let mut number = 5;
-
-    while number > 0 {
-        number-=1;
-        println!("number={:?}",number);
+fn while_loop(limit: i32) {
+    let mut count = 0;
+    while count < limit {
+        println!("count = {}", count);
+        count += 1;
     }
+}
 
-    println!("Loop Finished\n");
+fn main() {
+    while_loop(5);
 }
